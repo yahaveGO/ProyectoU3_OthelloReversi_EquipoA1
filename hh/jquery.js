@@ -30,7 +30,7 @@ function metodoinitTablero(){
 
 	$('#idturnoGamer').text('Turno de la ficha : '+jugadorActual);
 	metodoActualizarPiezaTablero();
-	return 0;
+	//return 0;
 }
 
 
