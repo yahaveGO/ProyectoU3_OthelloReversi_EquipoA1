@@ -1,21 +1,53 @@
-<html>
+<!doctype html>
+<html lang="es">
+
 <head>
-	<title>Othello Reversi</title>	
-	<!-- <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/acro-script" rel="stylesheet" type="text/css"/> -->
-	<link rel="stylesheet" type="text/css" href="estilo.css?3">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
-	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-	<script src="jquery.js?3"></script>
+    <title>Othello Reversi</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body{
+            background:linear-gradient(90deg, #ff6e7fd7 0%,#bfe9ff 100% );
+        }
+
+        #menu{
+            width: 300px;
+            height: 600px;
+            margin-top: 20px;
+            font-family: 'font-family'; 
+	        font-weight: bold; 
+	        font-style: normal;
+            font-size: 20px;
+        }
+    </style>        
 </head>
+
 <body>
-	<h1> Othello </h1>	
-	<table id='board'>
-		<tbody></tbody>
-	</table>	
-	
-	<b><p id='currentplayer-text'></p></b>	
-	<b><p id='idwhite'></p></b>
-	<b><p id='idblack'></p></b>
-	<!-- <input type="button" value="Reiniciar juego" id='restartgame'> -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a href="hh/index.html"><input type="button" value="Humano vs Humano" class="btn btn-success" id="menu"></input></a>                
+            </div>
+            <div class="col-md-4">
+                <a href="hc/index.html"><input type="button" value="Humano vs Computadora" class="btn btn-light" id="menu"></input></a>
+            </div>
+            <div class="col-md-4">
+                <a href="cc/index.html"><input type="button" value="Computadora vs Computadora" class="btn btn-danger" id="menu"></input></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
