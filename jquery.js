@@ -49,22 +49,22 @@ function metodoTableroClicked(e){
     if (board[index]!= null){
     	//console.log('there is already a piece there')
     }
-    else{
+    else{//Son if ya que al tirar verifica las que se voltean a los 8 direciones
     	if (metodoRevisarTirada(row, col, 'arriba'))//				🡩
 			validMove = true;		
-		else if (metodoRevisarTirada(row, col, 'abajo'))//			🡣
+		if (metodoRevisarTirada(row, col, 'abajo'))//			🡣
     		validMove = true;
-		else if (metodoRevisarTirada(row, col, 'izquierda'))//		🡠
+		if (metodoRevisarTirada(row, col, 'izquierda'))//		🡠
     		validMove = true;
-		else if (metodoRevisarTirada(row, col, 'derecha'))//		🡢
+		if (metodoRevisarTirada(row, col, 'derecha'))//		🡢
 			validMove = true;			
-    	else if (metodoRevisarTirada(row, col, 'diagonal_izq_arriba'))//	🡤
+    	if (metodoRevisarTirada(row, col, 'diagonal_izq_arriba'))//	🡤
     		validMove = true;
-    	else if (metodoRevisarTirada(row, col, 'diagonal_der_abajo'))//		🡦
+    	if (metodoRevisarTirada(row, col, 'diagonal_der_abajo'))//		🡦
     		validMove = true;
-    	else if (metodoRevisarTirada(row, col, 'diagonal_der_arriba'))//	🡥
+    	if (metodoRevisarTirada(row, col, 'diagonal_der_arriba'))//	🡥
     		validMove = true;
-    	else if (metodoRevisarTirada(row, col, 'diagonal_izq_abajo'))//		🡧
+    	if (metodoRevisarTirada(row, col, 'diagonal_izq_abajo'))//		🡧
 			validMove = true;
 		
 
