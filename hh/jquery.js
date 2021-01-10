@@ -9,19 +9,14 @@ window.onload = function(){
 	metodoinitTablero();	
 };
 
-function metodoinitTablero(){
-	var i, j;
-	for (i = 1; i <= totalRows; i++){
+function metodoinitTablero(){	
+	for (var i = 1; i <= totalRows; i++){
 		$('tbody').append('<tr></tr>');
-		for (j = 1; j <= totalCols; j++){
-			tablero[index(i,j)] = null;
+		for (var j = 1; j <= totalCols; j++){
+			tablero[index(i, j)] = null;
 			$('tbody tr:nth-child('+i+')').append('<td><div class="cuadrado"></div></td>');
 		}
-	}	
-	// tablero[index(2,2)]='White';
-	// tablero[index(2,3)]='Black';
-	// tablero[index(3,2)]='Black';
-	// tablero[index(3,3)]='White';
+	}		
 
 	tablero[index(4,4)]='White';
 	tablero[index(4,5)]='Black';
@@ -29,8 +24,7 @@ function metodoinitTablero(){
 	tablero[index(5,5)]='White';
 
 	$('#idturnoGamer').text('Turno de la ficha : '+jugadorActual);
-	metodoActualizarPiezaTablero();
-	//return 0;
+	metodoActualizarPiezaTablero();	
 }
 
 
@@ -119,8 +113,8 @@ function metodoRevisarTirada(row, col, orientacion){
 		}
 		else
 			tirada = false;
-	}
-	if (arrayVoltearPiezas.length>0){
+	}//while
+	if (arrayVoltearPiezas.length > 0){
 		if (tablero[i] == jugadorActual){ 
 			metodoarrayVoltearPiezas(arrayVoltearPiezas);
 			return true;
@@ -140,10 +134,10 @@ function metodoActualizarPiezaTablero(){
 	for (var i = 1; i <= totalRows; i++){
 		for (var j=1; j <= totalCols; j++){
 			if (tablero[index(i,j)] == "Black"){
-				$('tbody tr:nth-child('+i+') :nth-child('+j+') :nth-child(1)').html('<div class="black piece"></div>');
+				$('tbody tr:nth-child('+i+') :nth-child('+j+') :nth-child(1)').html('<div class="black"></div>');
 			}
 			if (tablero[index(i,j)] == "White"){
-				$('tbody tr:nth-child('+i+') :nth-child('+j+') :nth-child(1)').html('<div class="white piece"></div>');
+				$('tbody tr:nth-child('+i+') :nth-child('+j+') :nth-child(1)').html('<div class="white"></div>');
 			}
 		}
 	}
@@ -160,13 +154,13 @@ function metodoCambiarGamer(){
 function index(row, col){ //indice del elemento en el tablero array, basado en las columnas y filas	
 	if (row < 1 || col < 1)
 		return null;	
-	var arrayIndex = (row-1) * totalRows + col - 1;	
+	var arrayIndex = (row - 1) * totalRows + col - 1;	
 	return arrayIndex;
 }
 
 function metodoRowColTablero(index){//extraer col y row del index
-	var row = Math.ceil((index+1) / totalRows);
-	var col = (index+1) % totalCols;
+	var row = Math.ceil((index + 1) / totalRows);
+	var col = (index + 1) % totalCols;
 	if (col == 0)
 		col = 8;
 	return [row, col];

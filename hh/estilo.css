@@ -18,10 +18,18 @@ body{
 
 .white{
 	background-color: white;
+	width: 60px;
+    height: 60px;
+    padding: 2px;    
+    border-radius: 50%; 
 }
 
 .black{
 	background-color: black;
+	width: 60px;
+    height: 60px;
+    padding: 2px;    
+    border-radius: 50%; 
 }
 
 #tablero{
@@ -35,11 +43,3 @@ body{
 	height: 64px;
 	background-color: #3a8636;
 }
-
-.piece {
-    width: 60px;
-    height: 60px;
-    padding: 2px;    
-    border-radius: 50%; 
-}
-
